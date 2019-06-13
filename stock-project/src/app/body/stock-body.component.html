@@ -1,0 +1,22 @@
+<div *ngIf="!requiredStockData">
+  <h4>Loading.....</h4>
+</div>
+
+<div class="container-fluid background" *ngIf="requiredStockData">
+  <br><br>
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="card text-white bg-dark text-center">
+        <h3><span>{{requiredStockData.symbol}}</span></h3>
+        <h4>On Date : {{requiredStockData.date}}</h4>
+        <h3>Closing Price : ${{requiredStockData.stockClose}}</h3>
+        <h3>Opening Price : ${{requiredStockData.stockOpen}}</h3>
+        <h3>High Price : ${{requiredStockData.stockHigh}}</h3>
+        <h3>Low Price : ${{requiredStockData.stockLow}}</h3>
+      </div>
+      <button (click)="goBack()" class="btn btn-success">Back</button>
+    </div>
+
+  </div>
+</div>

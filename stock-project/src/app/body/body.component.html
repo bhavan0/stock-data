@@ -1,0 +1,21 @@
+<div id="LoginForm">
+  <div class="container">
+    <h1 class="form-heading">Stock Form</h1>
+    <div class="login-form">
+      <div class="main-div">
+        <div class="panel">
+          <p>Please enter Company Symbol and date</p>
+        </div>
+        <form id="Login">
+          <div class="form-group">
+            <input type="text" class="form-control" id="symbol" placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <input type="date" class="form-control" id="date" placeholder="Starting Date">
+          </div>
+          <button class="btn btn-primary" type="submit" (click)="submitData($event)">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

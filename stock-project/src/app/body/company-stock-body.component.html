@@ -1,0 +1,22 @@
+<div *ngIf="!isHidden">
+  <h4>Loading.....</h4>
+</div>
+
+<div class="container background" *ngIf="isHidden">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Stock Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let temp of companyStock">
+        <th scope="row">{{temp.stockDate}}</th>
+        <td>${{temp.stockClose}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button (click)="goBack()" class="btn btn-success">Back</button>
